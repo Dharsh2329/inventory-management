@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inventory</title>
+</head>
+<body>
+    <h2>Inventory Products</h2>
+
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Action</th>
+        </tr>
+
+        {% for p in products %}
+        <tr>
+            <td>{{ p[1] }}</td>
+            <td>{{ p[2] }}</td>
+            <td>{{ p[3] }}</td>
+            <td><a href="/delete/{{ p[0] }}">Delete</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <a href="/">Add More</a>
+</body>
+</html>
